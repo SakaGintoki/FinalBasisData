@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NdaTau</title>
+    <link rel="website icon" href="logo (2).png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>e
+        document.body.style.transform = "scale(1.0)"; 
+        document.body.style.transformOrigin = "top left"; 
+    </script>
+    <header class="header">
+        <a href="#home" class="logo"><strong>Generasi</strong><span class="word-two">Cipta<span></a>
+        <div class="bx bx-menu" id="menu"><box-icon name='menu'></box-icon>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#about-us">about us</a></li>
+                <li><a href="#author">author</a></li>
+                <li><a href="#contact">contact</a></li>
+                <li><button id="darkMode-icon" onclick="toggleDarkMode()"><div class="bx bxs-buildings" id="darkMode-icon"><box-icon name='buildings' type='solid'></box-icon></div></button></li>
+            </ul>
+        </nav>
+        <button class="sign-up" role="button">Sign-up</button>  
+        <script>
+            function toggleDarkMode() {
+
+                document.body.classList.toggle('dark-mode');
+
+                const icon = document.getElementById('darkMode-icon');
+                if (document.body.classList.contains('dark-mode')) {
+
+                    icon.innerHTML = '<div class="bx bx-buildings" id="darkMode-icon"><box-icon name="buildings"></box-icon></div>';
+            
+                    const icons = document.querySelectorAll('.navbar-job .icon img');
+                    icons.forEach(icon => {
+                        icon.style.filter = 'invert(1)';
+                    });
+                } else {
+
+                    icon.innerHTML = '<div class="bx bxs-buildings" id="darkMode-icon"><box-icon name="buildings" type="solid"></box-icon></div>';
+                    const icons = document.querySelectorAll('.navbar-job .icon img');
+                    icons.forEach(icon => {
+                        icon.style.filter = 'invert(0)';
+                    });
+                }
+            }
+            
+        </script>
+    </header>
+    <script>
+        menu = document.querySelector("#menu");
+        menu.onclick = function() {
+            navBar = document.querySelector(".navbar");
+            navBar.classList.toggle("active");
+        }
+    </script>
+    <section class="home" id="home">
+        <div class="home-content">
+            <div class="box-one">
+                
+            </div>
+            <div class="navbar-job">
+                <div class="icon"><img src="ai-services-thin.104f389.png"></div>
+                <div class="icon"><img src="business-thin.885e68e.png" ></div>
+                <div class="icon"><img src="consulting-thin.d5547ff.png"></div>
+                <div class="icon"><img src="digital-marketing-thin.68edb44.png"></div>
+                <div class="icon"><img src="graphics-design-thin.ff38893.png"></div>
+                <div class="icon"><img src="music-audio-thin.43a9801.png"></div>
+                <div class="icon"><img src="programming-tech-thin.56382a2.png"></div>
+                <div class="icon"><img src="video-animation-thin.9d3f24d.png"></div>
+                <div class="icon"><img src="writing-translation-thin.fd3699b.png"></div>
+            </div>
+            
+            
+        </div>
+    </section>
+    <section class="about-us" id="about-us" >
+        <div class="about-us-content">
+            <div class="social-media">
+                <a href="#" id="facebook"> <i class='bx bxl-facebook' ></i> </a>
+                <a href="#" id="twitter"> <i class='bx bxl-twitter' ></i> </a>
+                <a href="#" id="instagram"> <i class='bx bxl-instagram-alt' ></i> </a>
+                <a href="#" id="linkedin"> <i class='bx bxl-linkedin' ></i> </a>
+            </div>
+            <p>Selamat datang,</p>
+            <h1 class="Kata"><span class="auto-type", c></span></h1>
+            
+            <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+            
+            <script>
+                var typed = new Typed(".auto-type", {
+                    strings: ["I'm Malvinshah Haris Athala", "The Owner Of this Website", "I hope you can enjoy"], 
+                    typeSpeed: 150,
+                    backSpeed: 150,
+                    loop : false,
+                })
+            </script>
+            <img src="mobile_banner_b19573f215.png" class="bg-image-one">
+            <p class="description-home">GenerasiCipta </p>
+        </div>
+    </section>
+</body>
+</html>
