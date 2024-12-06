@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - GenerasiCipta</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="signup-container">
+        <div class="signup-box">
+            <h2>Sign Up</h2>
+            <form onsubmit="return handleSignUp()">
+                <div class="input-box">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-box">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-box">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+            <p class="login-link">Already have an account? <a href="login.html">Login</a></p>
+        </div>
+    </div>
+
+    <script>
+        function handleSignUp() {
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Simpan data pengguna (mockup, gunakan backend untuk produksi)
+            alert(`Account created successfully!\n\nUsername: ${username}\nEmail: ${email}`);
+            
+            // Redirect ke login.html
+            window.location.href = "login.html";
+
+            return false; // Mencegah form refresh
+        }
+    </script>
+</body>
+</html>

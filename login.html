@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - GenerasiCipta</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form onsubmit="return validateLogin()">
+                <div class="input-box">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-box">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="button" class="btn" onclick="validateLogin()">Login</button>
+            </form>
+            <p class="register-link">Don't have an account? <a href="signup.html">Sign up</a></p>
+        </div>
+    </div>
+
+    <script>
+        function validateLogin() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Validasi login
+            if (username === "admin" && password === "admin123") {
+                // Redirect ke index.html
+                window.location.href = "index.html";
+            } else {
+                alert("Invalid username or password!");
+            }
+        }
+    </script>
+</body>
+</html>
