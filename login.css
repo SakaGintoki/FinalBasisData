@@ -1,35 +1,36 @@
 :root {
     --bg-color: #f8f9fa;
     --text-color: #333333;
-    --main-color: #4caf50;
+    --main-color: #00a896;
     --white-color: #ffffff;
-    --shadow-color: rgba(0, 0, 0, .1);
+    --shadow-color: rgba(0, 0, 0, 0.1);
     --nav-bar: #ffffff;
-    --grey: #fdfdfd;
+    --grey: #e0e0e0;
 }
-
 
 body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background: #f8f9fa;
+    background: linear-gradient(135deg, #00a896, #02c39a);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
 .login-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--bg-color);
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    padding: 20px 30px;
-    max-width: 400px;
+    background: var(--white-color);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    padding: 40px;
+    max-width: 450px;
     width: 100%;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .login-box {
@@ -38,63 +39,84 @@ body {
 }
 
 .login-box h2 {
-    font-size: 2.5rem;
-    color: var(--text-color);
+    font-size: 2.2rem;
+    color: var(--main-color);
     margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
 }
 
 .input-box {
-    margin-bottom: 15px;
-    text-align: left;
+    margin-bottom: 20px;
+    width: 100%;
+    position: relative;
 }
 
 .input-box label {
     display: block;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: var(--text-color);
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 .input-box input {
-    width: 92.5%;
-    padding: 10px 15px;
+    width: 100%;
+    padding: 12px 15px;
     font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    border: 2px solid var(--grey);
+    border-radius: 8px;
     outline: none;
+    transition: border 0.3s, box-shadow 0.3s;
 }
 
 .input-box input:focus {
     border-color: var(--main-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .btn {
     width: 100%;
-    padding: 10px 15px;
-    font-size: 1.2rem;
-    color: black;
+    padding: 12px 15px;
+    font-size: 1.1rem;
+    color: white;
     background: var(--main-color);
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    margin-top: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s;
 }
 
 .btn:hover {
-    background: #388e3c;
+    background: #028090;
 }
 
 .register-link {
-    margin-top: 15px;
+    margin-top: 20px;
     font-size: 1rem;
     color: var(--text-color);
+    text-align: center;
 }
 
 .register-link a {
     color: var(--main-color);
+    font-weight: bold;
     text-decoration: none;
 }
 
 .register-link a:hover {
     text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }

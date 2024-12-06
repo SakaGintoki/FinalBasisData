@@ -30,14 +30,47 @@
                 <li><button id="darkMode-icon" onclick="toggleDarkMode()"><div class="bx bxs-buildings" id="darkMode-icon"><box-icon name='buildings' type='solid'></box-icon></div></button></li>
             </ul>
         </nav>
-        <button class="sign-up" role="button">Sign-up</button>  
+        <button class="sign-up" id="sign-up" role="button">Sign-up</button>  
+    
+        <div class="popup-overlay" id="popupOverlay">
+            <div class="popup" id="authPopup">
+                <h2 id="popupTitle">Sign In</h2>
+                <div class="input-box">
+                    <input type="email" placeholder="Email">
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Password">
+                </div>
+                <button class="btn" id="actionBtn">Sign In</button>
+                <p class="switch-btn" id="switchMode">Switch to Sign Up</p>
+                <p class="close-btn" id="closePopup">Close</p>
+            </div>
+        </div>
         <script>
-            document.querySelector('.sign-up').addEventListener('click', () => {
-                window.location.href = "signup.html";
+            const signInBtn = document.getElementById('sign-up');
+            const popupOverlay = document.getElementById('popupOverlay');
+            const closePopup = document.getElementById('closePopup');
+            const popupTitle = document.getElementById('popupTitle');
+            const actionBtn = document.getElementById('actionBtn');
+            const switchMode = document.getElementById('switchMode');
+    
+            let isSignIn = true;
+    
+            signInBtn.addEventListener('click', () => {
+                popupOverlay.style.display = 'flex';
             });
-            
-        </script>
-
+    
+            closePopup.addEventListener('click', () => {
+                popupOverlay.style.display = 'none';
+            });
+    
+            switchMode.addEventListener('click', () => {
+                isSignIn = !isSignIn;
+                popupTitle.textContent = isSignIn ? 'Sign In' : 'Sign Up';
+                actionBtn.textContent = isSignIn ? 'Sign In' : 'Sign Up';
+                switchMode.textContent = isSignIn ? 'Switch to Sign Up' : 'Switch to Sign In';
+            });
+        </script>    
         <script>
             function toggleDarkMode() {
 
@@ -87,11 +120,9 @@
                 <div class="icon"><img src="video-animation-thin.9d3f24d.png"></div>
                 <div class="icon"><img src="writing-translation-thin.fd3699b.png"></div>
             </div>
-            
-            
         </div>
     </section>
-    <section class="about-us" id="about-us" >
+    <section class="about-us" id="about-us">
         <div class="about-us-content">
             <div class="social-media">
                 <a href="#" id="facebook"> <i class='bx bxl-facebook' ></i> </a>
@@ -114,6 +145,49 @@
             </script>
             <img src="mobile_banner_b19573f215.png" class="bg-image-one">
             <p class="description-home">GenerasiCipta </p>
+        </div>
+    </section>
+    <section class="author" id="author" >
+        <div class="author-content">
+            <div class="navbar-author">
+                <div class="icon">
+                    <img src="/Project/Jasa Mahasiswa/FinalBasisData/New folder/1705935663267.png">
+                    <div class="social-media">
+                        <a href="#" id="facebook"> <i class='bx bxl-facebook' ></i> </a>
+                        <a href="#" id="twitter"> <i class='bx bxl-twitter' ></i> </a>
+                        <a href="#" id="instagram"> <i class='bx bxl-instagram-alt' ></i> </a>
+                        <a href="#" id="linkedin"> <i class='bx bxl-linkedin' ></i> </a>
+                    </div>
+                </div>
+                <div class="icon">
+                    <img src="/Project/Jasa Mahasiswa/FinalBasisData/New folder/WhatsApp Image 2024-12-06 at 21.51.06_20aa3683.jpg" >
+                    <div class="social-media">
+                        <a href="#" id="facebook"> <i class='bx bxl-facebook' ></i> </a>
+                        <a href="#" id="twitter"> <i class='bx bxl-twitter' ></i> </a>
+                        <a href="#" id="instagram"> <i class='bx bxl-instagram-alt' ></i> </a>
+                        <a href="#" id="linkedin"> <i class='bx bxl-linkedin' ></i> </a>
+                    </div>
+                </div>
+                <div class="icon">
+                    <img src="/Project/Jasa Mahasiswa/FinalBasisData/New folder/1726654102019.png">
+                    <div class="social-media">
+                        <a href="#" id="facebook"> <i class='bx bxl-facebook' ></i> </a>
+                        <a href="#" id="twitter"> <i class='bx bxl-twitter' ></i> </a>
+                        <a href="#" id="instagram"> <i class='bx bxl-instagram-alt' ></i> </a>
+                        <a href="#" id="linkedin"> <i class='bx bxl-linkedin' ></i> </a>
+                    </div>
+                </div>
+                <div class="icon">
+                    <img src="/Project/Jasa Mahasiswa/FinalBasisData/New folder/Screenshot 2024-12-06 215202.png">
+                    <div class="social-media">
+                        <a href="#" id="facebook"> <i class='bx bxl-facebook' ></i> </a>
+                        <a href="#" id="twitter"> <i class='bx bxl-twitter' ></i> </a>
+                        <a href="#" id="instagram"> <i class='bx bxl-instagram-alt' ></i> </a>
+                        <a href="#" id="linkedin"> <i class='bx bxl-linkedin' ></i> </a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 </body>
