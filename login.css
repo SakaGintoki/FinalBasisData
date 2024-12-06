@@ -1,3 +1,14 @@
+:root {
+    --bg-color: #f8f9fa;
+    --text-color: #333333;
+    --main-color: #4caf50;
+    --white-color: #ffffff;
+    --shadow-color: rgba(0, 0, 0, .1);
+    --nav-bar: #ffffff;
+    --grey: #fdfdfd;
+}
+
+
 body {
     margin: 0;
     padding: 0;
@@ -45,7 +56,7 @@ body {
 }
 
 .input-box input {
-    width: 100%;
+    width: 92.5%;
     padding: 10px 15px;
     font-size: 1rem;
     border: 1px solid #ddd;

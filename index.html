@@ -30,8 +30,14 @@
                 <li><button id="darkMode-icon" onclick="toggleDarkMode()"><div class="bx bxs-buildings" id="darkMode-icon"><box-icon name='buildings' type='solid'></box-icon></div></button></li>
             </ul>
         </nav>
-        <a href="signup.html" class="sign-up" role="button">Sign-up</a>
-  
+        <button class="sign-up" role="button">Sign-up</button>  
+        <script>
+            document.querySelector('.sign-up').addEventListener('click', () => {
+                window.location.href = "signup.html";
+            });
+            
+        </script>
+
         <script>
             function toggleDarkMode() {
 
