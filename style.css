@@ -359,6 +359,92 @@ section {
     border-radius: 20px;
     background: var(--main-color);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.home-content .box-one img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+    border-radius: 20px;
+    position: absolute; 
+    top: 0;
+    left: 0;
+}
+
+.home-content .box-one .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Lapisan gelap untuk teks terlihat */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.home-content .box-one .overlay h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-family: 'Arial', sans-serif;
+}
+
+.home-content .box-one .overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.home-content .box-one .overlay .search-bar {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    max-width: 600px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    overflow: hidden;
+    background: white;
+}
+
+.home-content .box-one .overlay .search-bar input {
+    flex: 1;
+    border: none;
+    padding: 0.8rem 1rem;
+    outline: none;
+    font-size: 1rem;
+}
+
+.home-content .box-one .overlay .search-bar button {
+    background: var(--main-color);
+    border: none;
+    padding: 0.8rem 2rem;
+    color: var(--white-color);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.home-content .box-one .overlay .search-bar button i {
+    font-size: 1.2rem;
+}
+
+/* Media Query untuk Responsif */
+@media (max-width: 768px) {
+    .home-content .box-one .overlay h1 {
+        font-size: 2rem;
+    }
+    .home-content .box-one .overlay p {
+        font-size: 1rem;
+    }
+    .home-content .box-one .overlay .search-bar {
+        width: 80%;
+    }
 }
 
 .navbar-job {
@@ -376,8 +462,10 @@ section {
     border-radius: 15%;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start; 
+    padding: 1rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 }
@@ -389,14 +477,29 @@ section {
 
 .navbar-job .icon img {
     width: 60%;
-    height: 60%;
+    height: auto;
     object-fit: scale-down;
     filter: grayscale(1);
     transition: filter 0.3s ease;
+    margin-bottom: 0.5rem;
 }
 
 .navbar-job .icon:hover img {
     filter: grayscale(0);
+}
+
+.navbar-job .icon p {
+    font-size: 1rem; 
+    color: #333; 
+    text-align: left;
+    margin: 10px; 
+    font-weight: 600; 
+    line-height: 1.2;
+    transition: color 0.3s ease;
+}
+
+.navbar-job .icon:hover p {
+    color: var(--main-color); /* Warna teks berubah saat hover */
 }
 
 .about-us {
@@ -499,7 +602,7 @@ section {
 
 .navbar-author .icon {
     width: 100%;
-    max-width: 27.25rem;
+    max-width: 23.695%;
     background-color: var(--grey);
     border-radius: 15px;
     padding: 1rem;
