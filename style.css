@@ -72,6 +72,14 @@ header {
     transition: ease-out .4s;
 }
 
+/* .navbar {
+    min-height: 75px;
+    overflow: hidden;
+    transition: height 0.2s ease-in-out;
+} 
+*/
+
+
 .navbar ul li {
     text-decoration: none;
     list-style: none;
@@ -490,7 +498,8 @@ section {
 }
 
 .navbar-author .icon {
-    width: 27rem;
+    width: 100%;
+    max-width: 27.25rem;
     background-color: var(--grey);
     border-radius: 15px;
     padding: 1rem;
@@ -574,4 +583,82 @@ section {
 
 #linkedin:hover {
     background: #0077b5;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact .contact-content {
+    background-color: var(--bg-color);
+    padding: 6rem 4rem;
+    color: var(--text-color);
+    text-align: center;
+    box-shadow: 0 5px 20px var(--shadow-color);
+    border-radius: 12px;
+    margin: 3rem auto;
+    max-width: 900px;
+}
+
+.contact-content h2 {
+    font-size: 3.5rem; 
+    font-weight: bold;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+}
+
+.contact-content p {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 3rem;
+}
+
+.contact-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; 
+}
+
+.contact-content .form-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-content input, .contact-content textarea {
+    width: 100%;
+    padding: 1.5rem; 
+    border: 1px solid var(--grey);
+    border-radius: 8px;
+    background-color: var(--white-color);
+    color: var(--text-color);
+    font-size: 1.2rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.contact-content input:focus, .contact-content textarea:focus {
+    border-color: var(--main-color);
+}
+
+.contact-content textarea {
+    resize: none;
+}
+
+.contact-content .btn {
+    background-color: var(--main-color);
+    color: var(--white-color);
+    font-size: 1.5rem; 
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-content .btn:hover {
+    background-color: #028090;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
