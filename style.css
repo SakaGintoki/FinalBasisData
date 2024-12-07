@@ -490,7 +490,7 @@ section {
 
 .navbar-job .icon p {
     font-size: 1rem; 
-    color: #333; 
+    color: var(--text-color); 
     text-align: left;
     margin: 10px; 
     font-weight: 600; 
